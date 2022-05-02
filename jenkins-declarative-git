@@ -1,0 +1,10 @@
+pipeline {
+    agent any
+    stages{
+        stage("git checkout"){
+            steps{
+                git credentialsId: 'scmcredential', url: 'https://github.com/shauryasingh21/time-tracker'
+            }
+        }
+    }
+}
